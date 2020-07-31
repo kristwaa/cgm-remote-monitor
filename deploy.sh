@@ -113,9 +113,6 @@ selectNodeVersion
 # 3. Install npm packages
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd "$DEPLOYMENT_TARGET"
-  echo Installing windows-build-tools for VS 2015
-  eval $NPM_CMD install --global --production windows-build-tools --vs2015
-  eval $NPM_CMD config set msvs_version 2015 –global
   echo Installing webpack and webpack-command and yargs
   eval $NPM_CMD install -g webpack webpack-command 
   eval $NPM_CMD install yargs
